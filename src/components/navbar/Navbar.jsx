@@ -26,8 +26,8 @@ export default function Navbar() {
 
   return (
 
-    <nav id="home" className=''>
-      <div className='container flex justify-between items-center py-3 px-3 sm:py-0'>
+    <nav id="home" className='bg-[#f3f4f3]'>
+      <div className='container mx-auto flex justify-between items-center py-3 px-3 sm:py-0'>
         <h1 className="text-3xl md:text-5xl font-bold text-[#f98e2b] flex justify-center items-center px-16 ">
           portfolio
         </h1>
@@ -53,13 +53,13 @@ export default function Navbar() {
 
         {/* movile menu  */}
 
-        <div className="sm:hidden">
+        <div className="sm:hidden relative">
           <TiThMenuOutline
             className='text-2xl cursor-pointer'
             onClick={() => setMenu(!menu)}
           />
           {menu && (
-            <div className=" fixed top-16 bg-white dark:text-white dark:bg-gray-950 shadow-md rounded-b-xl  left-0 w-full z-10 py-10">
+            <div className="absolute top-8 right-0 bg-white/80 shadow-md rounded-md z-10 py-10">
               <ul className="flex flex-col items-center gap-4">
                 {navMenus.map((navMenu, index) => {
                   return (
